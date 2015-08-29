@@ -21,21 +21,23 @@ compiler can safely reclaim it.
  ```
  (gdb) gdb -q test  
  (gdb) br 33  
- (gdb) br 35
- ```
+ (gdb) br 35  
+ ```  
  Print some addresses from the list:  
  ```
  (gdb) print (*head)  
  $1 = {data = 20, next = 0x804b148, prev = 0x0}  
  (gdb) print *head->next  
  $2 = {data = 19, next = 0x804b138, prev = 0x804b278}  
- (gdb) print *head->next->next
+ (gdb) print *head->next->next  
  $3 = {data = 18, next = 0x804b128, prev = 0x804b148}  
  ```
- Continue until deletion:
+ Continue until deletion:  
  ```
- (gdb) cont  
- View their contents again, for example:  
+ (gdb) cont 
+ ```
+ View their contents again, for example:   
+ ```
  (gdb) print *head  
  Cannot access memory at address 0x0  
  (gdb) x/wx 0x804b148  
