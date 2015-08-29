@@ -12,4 +12,4 @@ To run, simply clone the repo: ```git clone https://github.com/0xLeo/data-struct
  
  **Results**  
  A wrapper script is used to make the source, test it on inputs of various sizes, for each sizeand measure the average linked   list creation (e.g. insert/ append) time.  
- ![alt-text](https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/ins-time-vs-numnodes.svg)
+ ![alt-text](https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/ins-time-vs-numnodes.jpg)
