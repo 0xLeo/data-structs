@@ -5,13 +5,14 @@ implementation and testing of various data structures
 
 **Description**  
 My implementation of doubly linked lists in C. It's a simple, sequential and light data structure. It's been tested  
-for various numbers of nodes, ranging from 5E+5 to 4E+8.  
+for various numbers of nodes, ranging from 5E+5 to 4E+8.    
 **Instructions**  
 To run, simply clone the repo: ```git clone https://github.com/0xLeo/data-structs.git```, head in the directory - ```cd ./data-structs/doubly-linked```, and in the terminal type ```make```. This will compile the source, run it, and clean the executable.  
  
  **Explanation**  
  The time complexity for an insertion/ deletion is O(1), and O(n) to traverse the list/ seek an element.  
- Below is a pictorial explanation of the functions developed, declared in ```./doubly-linked```.
+ Below is a pictorial explanation of the functions developed, declared in ```./doubly-linked/doubly.h```.
+ ---
  
  **Results**  
  * System Specifications  
