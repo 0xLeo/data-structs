@@ -12,7 +12,18 @@ To run, simply clone the repo: ```git clone https://github.com/0xLeo/data-struct
  **Explanation**  
  The time complexity for an insertion/ deletion is O(1), and O(n) to traverse the list/ seek an element.  
  Below is a pictorial explanation of the functions developed, declared in ```./doubly-linked/doubly.h```.
- ---
+ * list_insert  
+ <p align="center">
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_insert.png" width=60%>  
+</p>
+ * list_append  
+ Same as list_insert if we replace head with tail and tail->next with NULL instead of prev.  
+ * list_insert_at  
+ <p align="center">
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_insert_at.png" width=60%>  
+</p>  
+ * list_delete_at
+ [pending]
  
  **Results**  
  * System Specifications  
@@ -26,7 +37,9 @@ compiler: gcc 4.6.3
  * Time  
  
   A wrapper script is used to make the source, test it on inputs of various sizes, for each sizeand measure the average linked   list creation (e.g. insert/ append) time.  
- ![alt-text](https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/ins-time-vs-numnodes.jpg)  
+<p align="center">
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/ins-time-vs-numnodes.jpg" width=80%>  
+</p>  
  * Memory  
   When a node is deleted individually or the list is deleted as a whole the place it was taking is fred and zeroed out so the  compiler can safely reclaim it.  
   After running the program, let's take a look at the memory the first list (of length 30) is occupying. Fire up gdb and set    breakpoints before and after deletion:  
