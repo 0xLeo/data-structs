@@ -1,8 +1,12 @@
 # data-structs
 implementation and testing of various data structures
 
-### 1. doubly-linked
+<h3 align="center">Contents</h3>  
+<h4 align="center">1. doubly-linked</h4>  
+<h4 align="center">2. min heap</h4>
 
+
+### 1. doubly-linked    
 **Description**  
 My implementation of doubly linked lists in C. It's a simple, sequential and light data structure. It's been tested  
 for various numbers of nodes, ranging from 5E+5 to 4E+8.    
@@ -75,3 +79,16 @@ compiler: gcc 4.6.3
  ```
 
 ### 2. min-heap  
+  
+**Description**  
+Pointer-based implementation of a [min heap](https://en.wikipedia.org/wiki/Min-max_heap).
+This project is under progress.
+
+**Milestones**  
+Interface ✓  
+Insert ✓  
+Get Last added Parent ✓  
+Print nodes ✓  
+Sort   
+Search  
+Delete  
