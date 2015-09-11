@@ -74,4 +74,4 @@ compiler: gcc 4.6.3
  0x804b128:	0x00000000
  ```
 
-### 1. min-heap  
+### 2. min-heap  
