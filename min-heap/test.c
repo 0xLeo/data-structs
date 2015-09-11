@@ -47,8 +47,8 @@ node** nPP=&nP;
 	    2       3
 	  /   \   /   \
           4   5   6   7
-	 / \ / 
-         8 9 10	
+	 / \ / \
+         8 9 10	11
 *******************************************/
 	n1->_left = n2; n1->_right = n3; n2->_parent = n3->_parent = n1;
 	n2->_left = n4; n2->_right = n5; n4->_parent = n5->_parent = n2;
