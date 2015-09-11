@@ -44,7 +44,7 @@ compiler: gcc 4.6.3
   When a node is deleted individually or the list is deleted as a whole the place it was taking is fred and zeroed out so the  compiler can safely reclaim it.  
   After running the program, let's take a look at the memory the first list (of length 30) is occupying. Fire up gdb and set    breakpoints before and after deletion:  
  ```
- (gdb) gdb -q test
+ $ gdb -q test
  (gdb) br 33  
  (gdb) br 35  
  ```  
@@ -73,3 +73,5 @@ compiler: gcc 4.6.3
  (gdb) x/xw 0x804b128
  0x804b128:	0x00000000
  ```
+
+### 1. min-heap  
