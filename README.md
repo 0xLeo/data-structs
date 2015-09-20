@@ -30,11 +30,11 @@ To run, simply clone the repo: ```git clone https://github.com/0xLeo/data-struct
  * list_delete_at  
   -- In case the head is deleted (similar for tail)  
 <p align="center">
-  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_delete_at_1.png" width=60%>  
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_delete_at_2.png" width=65%>  
 </p> 
  -- In case any other node is deleted  
  <p align="center">
-  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_delete_at_2.png" width=60%>  
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_delete_at_1.png" width=65%>  
 </p> 
  
  **Results**  
