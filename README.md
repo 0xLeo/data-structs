@@ -82,7 +82,7 @@ compiler: gcc 4.6.3
 ### 2. Binary tree  
 ##### (./bin-tree)  
   * Description  
-  My C implementation of binary (not necessarily balanced), ordered, [binary trees](https://en.wikipedia.org/wiki/Binary_tree). The term ordered implies that for each parent node, the data of its left child is smaller than the parent's and the value of its right child is greater.
+  My C implementation of binary (not necessarily balanced), ordered, [ trees](https://en.wikipedia.org/wiki/Binary_tree). The term ordered implies that for each parent node, the data of its left child is smaller than the parent's and the value of its right child is greater.
   * Instructions  
   Clone the project and head to the tree directory:  
 ```
