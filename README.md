@@ -6,7 +6,8 @@ implementation and testing of various data structures
 <h4 align="center">2. Binary tree</h4>
 
 
-### 1. Doubly linked list (./doubly-linked)    
+### 1. Doubly linked list  
+##### (./doubly-linked)    
 **Description**  
 My implementation of doubly linked lists in C. It's a simple, sequential and light data structure. It's been tested  
 for various numbers of nodes, ranging from 5E+5 to 4E+8.    
@@ -78,5 +79,31 @@ compiler: gcc 4.6.3
  0x804b128:	0x00000000
  ```
 
-### 2. Binary tree (./bin-tree)  
-  \*\* info will be updated \*\*
+### 2. Binary tree  
+##### (./bin-tree)  
+  * Description  
+  My C implementation of binary (not necessarily balanced), ordered, [binary trees](https://en.wikipedia.org/wiki/Binary_tree). The term ordered implies that for each parent node, the data of its left child is smaller than the parent's and the value of its right child is greater.
+  * Instructions  
+  Clone the project and head to the tree directory:  
+```
+$ git clone https://github.com/0xLeo/data-structs.git
+$ cd data-structs/bin-tree/
+```
+ The test consists of 4 parts. To compile all of them, run them, and delete the outputs, type:
+```
+$ make
+```
+ Alternatively, to compile and run a single test, e.g. 3, type:
+```
+$ make build3
+$ make run3
+$ make clean
+```
+  * Explanation  
+  Comments on how the tree functions work are found in tree.c. The functions for traversal, deletion, obtaining the minimum data, and search data are defined there. The average time complexity for every one of them is O(n). Test 4 measures the average search time, over 10 executions, for various data set sizes.  
+  * Results  
+ <p align="center">
+  <img src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test04.jpg" width=75%>  
+</p>
+The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test04csv.csv).
+ 
