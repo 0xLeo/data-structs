@@ -34,7 +34,7 @@ To run, simply clone the repo: ```git clone https://github.com/0xLeo/data-struct
 </p> 
  -- In case any other node is deleted  
  <p align="center">
-  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_delete_at_1.png" width=60%>  
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_delete_at_2.png" width=60%>  
 </p> 
  
  **Results**  
