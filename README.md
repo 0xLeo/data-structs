@@ -19,7 +19,7 @@ To run, simply clone the repo: ```git clone https://github.com/0xLeo/data-struct
  Below is a pictorial explanation of the functions developed, declared in ```./doubly-linked/doubly.h```.
  * list_insert  
  <p align="center">
-  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_insert.png" width=60%>  
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_insert.png" width=55%>  
 </p>
  * list_append  
  Same as list_insert if we replace head with tail and tail->next with NULL instead of prev.  
@@ -27,8 +27,15 @@ To run, simply clone the repo: ```git clone https://github.com/0xLeo/data-struct
  <p align="center">
   <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_insert_at.png" width=60%>  
 </p>  
- * list_delete_at
- [pending]
+ * list_delete_at  
+  -- In case the head is deleted (similar for tail)  
+<p align="center">
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_delete_at_1.png" width=60%>  
+</p> 
+ -- In case any other node is deleted  
+ <p align="center">
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_delete_at_1.png" width=60%>  
+</p> 
  
  **Results**  
  * System Specifications  
