@@ -100,7 +100,7 @@ $ make run3
 $ make clean
 ```
   * Explanation  
-  Comments on how the tree functions work are found in tree.c. The functions for traversal, deletion, obtaining the minimum data, and search data are defined there. The average time complexity for every one of them is O(n). Test 4 measures the average search time, over 10 executions, for various data set sizes.  
+  Comments on how the tree functions work are found in tree.c. The functions for traversal, deletion, obtaining the minimum data, and search data are defined there. The average time complexity for every one of them is O(log(n)). Test 4 measures the average search time, over 10 executions, for various data set sizes.  
   * Results  
  <p align="center">
   <img src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test04.jpg" width=75%>  
