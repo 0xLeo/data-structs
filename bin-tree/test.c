@@ -35,6 +35,8 @@ int main() {
 	#ifdef TEST3
 		sleep(2);
 		printf("-- min data = %d\n", tree_get_min(&nTestP));
+		tree_del_all(&nTestP);
+		printf("-- tree deleted\n");
 	#endif
 
 	#ifdef TEST4
@@ -47,8 +49,6 @@ int main() {
 		printf("-- searching %d\n",r);	
 		int i = tree_search(&nTestP, r);
 		( i == 1 ) ? printf("-- found\n") : printf("-- not found\n");
-		tree_del_all(&nTestP);
-		printf("-- tree deleted\n");
 	#endif
 
 }
