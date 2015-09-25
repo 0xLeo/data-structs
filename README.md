@@ -109,7 +109,7 @@ $ make clean
 * test1 = insertion
 * test2 = traversal
 * test3 = get min + deletion
-* test4 = search + measure time  
+* test4 = search + measure time
 
   **Explanation**  
   Comments on how the tree functions work are found in tree.c. The functions for traversal, deletion, obtaining the minimum data, and search data are defined there. The average time complexity for every one of them is O(log(n)). Test 4 measures the average search time, over 10 executions, for various data set sizes.  
