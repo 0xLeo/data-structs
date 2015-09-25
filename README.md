@@ -88,9 +88,9 @@ compiler: gcc 4.6.3
 
 ### 2. Binary tree  
 ##### (./bin-tree)  
-  * Description  
-  My C implementation of binary (not necessarily balanced), ordered, [ trees](https://en.wikipedia.org/wiki/Binary_tree). The term ordered implies that for each parent node, the data of its left child is smaller than the parent's and the value of its right child is greater.
-  * Instructions  
+  **Description**  
+  My C implementation of binary (not necessarily balanced), ordered, [ trees](https://en.wikipedia.org/wiki/Binary_tree). The term ordered implies that for each parent node, the data of its left child is smaller than the parent's and the value of its right child is greater.  
+  **Instructions**  
   Clone the project and head to the tree directory:  
 ```
 $ git clone https://github.com/0xLeo/data-structs.git
@@ -106,11 +106,26 @@ $ make build3
 $ make run3
 $ make clean
 ```
-  * Explanation  
+* test1 = insertion
+* test2 = traversal
+* test3 = get min + deletion
+* test4 = search + measure time  
+
+  **Explanation**  
   Comments on how the tree functions work are found in tree.c. The functions for traversal, deletion, obtaining the minimum data, and search data are defined there. The average time complexity for every one of them is O(log(n)). Test 4 measures the average search time, over 10 executions, for various data set sizes.  
-  * Results  
+    
+  **Results**  
+ System Specifications:
+```
+CPU: Intel(R) Core(TM) i3 CPU M 380 @ 2.53GHz
+RAM size: 8 GB
+cache size: 6144 KB
+Distribution: Ubuntu 12.04.5 LTS
+compiler: gcc 4.6.3
+```
  <p align="center">
   <img src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test04.jpg" width=75%>  
-</p>
+</p>  
+
 The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test04csv.csv).
  
