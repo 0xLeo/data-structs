@@ -76,7 +76,8 @@ compiler: gcc 4.6.3
 * Traversal time  
 <p align="center">
   <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/test23.png" title="test 2 and 3" width=75%>  
-</p>
+</p>  
+`[*]` Creation takes roughly 6-7 times more than traversal. The latter is extremely fast as it's broken down to N (size of list) pointer updates.
 
 ### 2. Binary tree  
 ##### (./bin-tree)  
