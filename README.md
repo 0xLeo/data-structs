@@ -30,6 +30,7 @@ Head in the linked list directory:
  ```
  Or you can measure the traversal time by changing the hardcoded `SIZE_TEST2` in `doubly.h` and:  
  ```
+ make clean
  make build
  make time
  ```
