@@ -145,7 +145,7 @@ void list_del_at (nodeP* head, nodeP* tail, const int n) {
 		if (tail ) {
 			nodeP temp  = (nodeP) malloc(sizeof(node));
 			temp = *tail;
-			printf("--tail->prev=%d\n",((*tail)->prev)->data);
+			//printf("--tail->prev=%d\n",((*tail)->prev)->data);
 			*tail = (*tail)->prev;
 			(*tail)->next = NULL;
 			free(temp);

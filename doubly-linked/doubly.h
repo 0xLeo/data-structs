@@ -2,7 +2,7 @@
 #define DOUBLY_H
 
 #define SIZE_TEST1 30
-#define SIZE_TEST2 40000000 
+#define SIZE_TEST2 6000000 
 
 typedef struct _node {
 	int data;
