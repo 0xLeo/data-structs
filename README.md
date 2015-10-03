@@ -18,7 +18,7 @@ To download, simply clone the repo:
 `git clone https://github.com/0xLeo/data-structs.git`  
 Head in the linked list directory:  
 `cd ./data-structs/doubly-linked`  
- Three tests have been configured. (1) visually explains the list operations on a small number of nodes. (2) is used in conjunction with (3) and it creates a large (millions of nodes) list. (3) creates a list of the same size and traverses it. For example to run `test1` (ignore the error when `./test2` and `./test3` do not have targets):  
+ Three tests have been configured. (1) visually explains the list operations on a small number of nodes. (2) is used in conjunction with (3) and it creates a large (millions of nodes) list. (3) creates a list of the same size and traverses it. For example to run `test1` (ignore the warnings when `./test2` and `./test3` do not have targets):  
  ```
  make test1
  make run
@@ -73,7 +73,10 @@ cache size: 6144 KB
 Distribution: Ubuntu 12.04.5 LTS
 compiler: gcc 4.6.3
 ```  
-
+* Traversal time  
+<p align="center">
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/test23.png" title="test 2 and 3" width=75%>  
+</p>
 
 ### 2. Binary tree  
 ##### (./bin-tree)  
