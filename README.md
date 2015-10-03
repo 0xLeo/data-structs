@@ -11,7 +11,7 @@ implementation and testing of various data structures
 ######Description
   
 My implementation of doubly linked lists in C. It's a simple, sequential and light data structure. It's been tested  
-for various numbers of nodes, ranging from 2E+5 to 6E+6.    
+for various numbers of nodes, ranging from 2E+4 to 6E+6.    
 ######Instructions
   
 To download, simply clone the repo:  
