@@ -1,42 +1,80 @@
 CC = gcc
-CFLAGS = -O2 -g -std=c99
-SRCF = tree.c test.c
-EXECF1 = test1
-EXECF2 = test2
-EXECF3 = test3
-EXECF4 = test4
+CFLAGS = -O2 -g -std=c99 -I.
+SRC1 = test.c
+SRC2 = tree.c
+OBJ0 = tree
+OBJ1 = test1.o
+OBJ2 = test2.o
+OBJ3 = test3.o
+OBJ4 = test4.o
+OBJ5 = test5.o
+EXE1 = test1
+EXE2 = test2
+EXE3 = test3
+EXE4 = test4
+EXE5 = test5
 
-default:
-	@$(MAKE) -s build1
-	@$(MAKE) -s build2
-	@$(MAKE) -s build3
-	@$(MAKE) -s build4
-	@$(MAKE) -s run1
-	@$(MAKE) -s run2
-	@$(MAKE) -s run3
-	@$(MAKE) -s run4
+$(OBJ0): $(SRC2)
+	$(CC) -c $(CFLAGS) $(SRC2) -o $(OBJ0)
 
-build1:
-	$(CC) $(CFLAGS) -DTEST1 $(SRCF) -o $(EXECF1)
-build2:
-	$(CC) $(CFLAGS) -DTEST2 $(SRCF) -o $(EXECF2)
-build3:
-	$(CC) $(CFLAGS) -DTEST3 $(SRCF) -o $(EXECF3) 
-build4:
-	$(CC) $(CFLAGS) -DTEST4 $(SRCF) -o $(EXECF4)
+$(OBJ1): $(SRC1)
+	$(CC) -c -DTEST1 $(CFLAGS) $(SRC1) -o $(OBJ1)
 
-run1:
-	./$(EXECF1) | tee out1.txt
-run2:
-	./$(EXECF2) | tee out2.txt
+$(OBJ2): $(SRC1)
+	$(CC) -c -DTEST2 $(CFLAGS) $(SRC1) -o $(OBJ2)
+
+$(OBJ3): $(SRC1)
+	$(CC) -c -DTEST3 $(CFLAGS) $(SRC1) -o $(OBJ3)
+
+$(OBJ4): $(SRC1)
+	$(CC) -c -DTEST3 -DTEST4 $(CFLAGS) $(SRC1) -o $(OBJ4)
+
+$(OBJ5): $(SRC1)
+	$(CC) -c -DTEST3 -DTEST5 $(CFLAGS) $(SRC1) -o $(OBJ5)
+
+$(EXE1): $(OBJ0) $(OBJ1)
+	$(CC) $(OBJ0) $(OBJ1) -o $(EXE1)
+
+$(EXE2): $(OBJ0) $(OBJ2)
+	$(CC) $(OBJ0) $(OBJ2) -o $(EXE2)
+
+$(EXE3): $(OBJ0) $(OBJ3)
+	$(CC) $(OBJ0) $(OBJ3) -o $(EXE3)
+
+$(EXE4): $(OBJ0) $(OBJ4)
+	$(CC) $(OBJ0) $(OBJ4) -o $(EXE4)
+
+$(EXE5): $(OBJ0) $(OBJ5)
+	$(CC) $(OBJ0) $(OBJ5) -o $(EXE5)
+
+build:
+	@$(MAKE) $(OBJ0)
+	@$(MAKE) $(OBJ1)
+	@$(MAKE) $(OBJ2)
+	@$(MAKE) $(OBJ3)
+	@$(MAKE) $(OBJ4)
+	@$(MAKE) $(OBJ5)
+	@$(MAKE) $(EXE1)
+	@$(MAKE) $(EXE2)
+	@$(MAKE) $(EXE3)
+	@$(MAKE) $(EXE4)
+	@$(MAKE) $(EXE5)
+
+run:
+	./$(EXE1)
+	./$(EXE2)
 	chmod +x test12.sh
 	./test12.sh
-run3:
-	./$(EXECF3) 
-run4:
-	chmod +x test4.sh
-	./test12.sh
-	./test4.sh
+	./$(EXE3)
+	./$(EXE4)
+	./$(EXE5)
+
+time: $(EXE3) $(EXE4) $(EXE5)
+	chmod +x test345.sh
+	./test345.sh $(EXE3)
+	./test345.sh $(EXE4)
+	./test345.sh $(EXE5)
 
 clean:
-	$(RM) $(EXECF1) $(EXECF2) $(EXECF3) $(EXECF4) out1.txt out2.txt 
+	$(RM) $(OBJ0) $(OBJ1) $(OBJ2) $(OBJ3) $(OBJ4) $(OBJ5) $(EXE1) $(EXE2) $(EXE3) $(EXE4) $(EXE5) test3.txt test4.txt test5.txt  temp
+

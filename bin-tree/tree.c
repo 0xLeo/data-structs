@@ -38,7 +38,9 @@ void tree_insert(node** nP, int val){
 	}
 }
 
-
+/*
+	follow leftmost branches to return min
+*/
 int tree_get_min(node** rootP){
 	node* tempP = (node*) malloc(sizeof(node));
 	tempP = *rootP;
@@ -79,19 +81,17 @@ void tree_del_all(node** nP){
 	}
 }
 
-void tree_print(node* nP, node** newP, long int ctr, int* max) {
-      if ((nP  )){ printf("@depth %lu: %d\n" , ctr, nP->data);};
-	  /*
-          if (ctr <= *max) {
-              *max = ctr; 
-              *newP = nP;
-          }       
-          ctr = 0;
-          //return *newP;
-      	*/
+/*
+	depth first search to visit all nodes once
+	adapted from here:
+	https://gist.github.com/0xLeo/dbd53a1b47e5cf6c2b34
+	flag to !=0 to print data
+*/
+void tree_print(node* nP, node** newP, long int ctr, int* max, const int* printFlag) {
+      if (( nP && *printFlag )){ printf("@depth %lu: %d\n" , ctr, nP->data);};
           ctr++; 
-         if (nP->right) {tree_print(nP->right, newP, ctr, max);}
-         if (nP->left) {tree_print(nP->left, newP, ctr, max);}
+         if ( nP->right ) { tree_print(nP->right, newP, ctr, max, printFlag); }
+         if ( nP->left ) { tree_print(nP->left, newP, ctr, max, printFlag); }
 
 }
 

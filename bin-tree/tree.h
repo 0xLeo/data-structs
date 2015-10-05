@@ -19,6 +19,6 @@ void tree_insert(node** nP, int val);
 int tree_get_min(node** rootP);
 int tree_search(node** nP, int val) ;
 void tree_del_all(node** nP);
-void tree_print(node* nP, node** newP, long int ctr, int* max);
+void tree_print(node* nP, node** newP, long int ctr, int* max, const int* printFlag);
 
 #endif
