@@ -116,7 +116,7 @@ To create all executables and run all test for 1000000 nodes type:
 make build
 make run
 ```
-To run tests 4,5 ([measure time](#anchor1)) do:
+To run tests 4,5, i.e. [measure time](#anchor1), do:
 ```
 make time
 ```
