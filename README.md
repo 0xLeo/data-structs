@@ -158,4 +158,4 @@ compiler: gcc 4.6.3
 
 The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test45.csv).
  
-`[**]` <a id="anchor1>To see why time was measured with shell</a>, view  [issue 2](<a id="anchor1>).
+`[**]` <a id="anchor1"></a>To see why time was measured with shell, view  [issue 2](https://github.com/0xLeo/data-structs/issues/2).
