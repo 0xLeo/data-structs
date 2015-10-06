@@ -81,7 +81,7 @@ compiler: gcc 4.6.3
 
 ### 2. Binary tree  
 ##### (./bin-tree)  
-  <h6>Description</h6>  
+  <h6>Description</h6>
   My C implementation of binary (not necessarily balanced), ordered, [ trees](https://en.wikipedia.org/wiki/Binary_tree). The term ordered implies that for each parent node, the data of its left child is smaller than the parent's and the value of its right child is greater.  
   <h6>Instructions</h6> 
   Clone the project and head in the tree directory:  
@@ -126,10 +126,10 @@ make test3
 ./test3
 ```
 
-  <h6>Explanation</h6>   
+  <h6>Explanation</h6>
   Comments on how the tree functions work are found in tree.c. Time complexity for Depth-First traversal is `O(n)`, for search/ access `O(log(n))` and for deletion `O(log(n))`. When inserting random data, the tree may be badly balanced, so the complexity for each function may converge to its worst time (linear - when all nodes are aligned like in a linked list).  
     
-  <h6>Results</h6>   
+  <h6>Results</h6>
  System Specifications:
 ```
 CPU: Intel(R) Core(TM) i3 CPU M 380 @ 2.53GHz
