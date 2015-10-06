@@ -114,7 +114,7 @@ Files test4.txt and test5.txt will be generated, containing the search and trave
 ```
 paste test4.txt test5.txt  | sed 's/\s/, /g' | sed 's/^/1000000, /g'
 ```
-You can change the number of nodes (`INPUT_SIZE_2` in tree.h) or the number of repetitions (`N` in test345.sh, however low `N`'s do not eliminate randomness so it is recommended to keep it above 30) and repeat:
+You can change the number of nodes (`INPUT_SIZE_2` in tree.h) or the number of repetitions (`N` in test345.sh, however low `N`'s do not eliminate randomness so it is recommended to keep it above 30) and repeat (make sure the CPU usage of other processes is low):
 ```
 make clean
 make build
