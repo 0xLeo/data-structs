@@ -5,7 +5,7 @@
 # test3.txt = creation time, 
 # test4.txt = search, test5.txt = traversal
  
-N=30;
+N=50;
 test_num=$(echo $1 | grep -o [0-9])
 
 #########################################
