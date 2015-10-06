@@ -18,17 +18,25 @@ To download, simply clone the repo:
 `git clone https://github.com/0xLeo/data-structs.git`  
 Head in the linked list directory:  
 `cd ./data-structs/doubly-linked`  
- Three tests have been configured. (1) visually explains the list operations on a small number of nodes. (2) is used in conjunction with (3) and it creates a large (millions of nodes) list. (3) creates a list of the same size and traverses it. For example to run `test1`:
+ Three tests (+) have been configured.
+ ```
+ + Demonstrates list operations on standard output
+ |
+ + Create a large list
+ |
+ +--+ Traverse large list
+ ```
+ For example to run `test1`:
  ```
  make test1
 ./test1
  ```
- You can build alI executables and run them by:  
+ You can build all executables and run them by:  
  ```
  make build
  make run
  ```
- Or you can measure the traversal time by changing the hardcoded `SIZE_TEST2` in `doubly.h` and:  
+ Or you can measure the traversal [time](#anchor1) by changing the hardcoded `SIZE_TEST2` in `doubly.h` and:  
  ```
  make clean
  make build
@@ -73,6 +81,8 @@ cache size: 6144 KB
 Distribution: Ubuntu 12.04.5 LTS
 compiler: gcc 4.6.3
 ```  
+Deletion, access, and insertion, and search are reduced to traversal (seek), therefore there is not really point measuring their time.
+  
 * Traversal time  
 <p align="center">
   <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/test23.png" title="test 2 and 3" width=75%>  
@@ -106,7 +116,7 @@ To create all executables and run all test for 1000000 nodes type:
 make build
 make run
 ```
-To run tests 4,5 (measure time) do:
+To run tests 4,5 ([measure time](#anchor1)) do:
 ```
 make time
 ```
@@ -148,3 +158,4 @@ compiler: gcc 4.6.3
 
 The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test45.csv).
  
+`[**]` <a id="anchor1>To see why time was measured with shell</a>, view  [issue 2](<a id="anchor1>).
