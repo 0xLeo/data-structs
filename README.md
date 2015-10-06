@@ -81,33 +81,32 @@ compiler: gcc 4.6.3
 
 ### 2. Binary tree  
 ##### (./bin-tree)  
-  **Description**  
+  <h6>Description</h6>  
   My C implementation of binary (not necessarily balanced), ordered, [ trees](https://en.wikipedia.org/wiki/Binary_tree). The term ordered implies that for each parent node, the data of its left child is smaller than the parent's and the value of its right child is greater.  
-  **Instructions**  
-  Clone the project and head to the tree directory:  
+  <h6>Instructions</h6> 
+  Clone the project and head in the tree directory:  
 ```
 $ git clone https://github.com/0xLeo/data-structs.git
 $ cd data-structs/bin-tree/
 ```
- The test consists of 4 parts. To compile all of them, run them, and delete the outputs, type:
+test.c defines 5 tests (+):
 ```
-$ make
-```
- Alternatively, to compile and run a single test, e.g. 3, type:
-```
-$ make build3
-$ make run3
-$ make clean
-```
-* test1 = insertion
-* test2 = traversal
-* test3 = get min + deletion
-* test4 = search + measure time
++ Insert batches of data
+|
++ Traverse tree, print nodes, and delete. `test12.sh` verifies whether all nodes were reached.
+|
++ Create large tree with random data.
+|
++--+ Search last inserted element. Guaranteed to find it so that the search is deep.
+|
++--+ Traverse without printing.
+```  
+/* add makefile info /*
 
-  **Explanation**  
-  Comments on how the tree functions work are found in tree.c. The functions for traversal, deletion, obtaining the minimum data, and search data are defined there. The average time complexity for every one of them is O(log(n)). Test 4 measures the average search time, over 10 executions, for various data set sizes.  
+  <h6>Explanation</h6>   
+  Comments on how the tree functions work are found in tree.c. Time complexity for Depth-First traversal is `O(n)`, for search/ access `O(log(n))` and for deletion `O(log(n))`. When inserting random data, the tree may be badly balanced, so the complexity for each function may converge to its worst time (linear - when all nodes are aligned like in a linked list).  
     
-  **Results**  
+  <h6>Results</h6>   
  System Specifications:
 ```
 CPU: Intel(R) Core(TM) i3 CPU M 380 @ 2.53GHz
@@ -116,9 +115,8 @@ cache size: 6144 KB
 Distribution: Ubuntu 12.04.5 LTS
 compiler: gcc 4.6.3
 ```
- <p align="center">
-  <img src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test04.jpg" width=75%>  
-</p>  
+ 
+ /* add graphs /*  
 
-The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test04csv.csv).
+The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test45.csv).
  
