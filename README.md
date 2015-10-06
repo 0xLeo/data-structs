@@ -18,10 +18,10 @@ To download, simply clone the repo:
 `git clone https://github.com/0xLeo/data-structs.git`  
 Head in the linked list directory:  
 `cd ./data-structs/doubly-linked`  
- Three tests have been configured. (1) visually explains the list operations on a small number of nodes. (2) is used in conjunction with (3) and it creates a large (millions of nodes) list. (3) creates a list of the same size and traverses it. For example to run `test1` (ignore the warnings when `./test2` and `./test3` do not have targets):  
+ Three tests have been configured. (1) visually explains the list operations on a small number of nodes. (2) is used in conjunction with (3) and it creates a large (millions of nodes) list. (3) creates a list of the same size and traverses it. For example to run `test1`:
  ```
  make test1
- make run
+./test1
  ```
  You can build alI executables and run them by:  
  ```
@@ -101,7 +101,30 @@ test.c defines 5 tests (+):
 |
 +--+ Traverse without printing.
 ```  
-/* add makefile info /*
+To create all executables and run all test for 1000000 nodes type:
+```
+make build
+make run
+```
+To run tests 4,5 (measure time) do:
+```
+make time
+```
+Files test4.txt and test5.txt will be generated, containing the search and traversal time. Once you got these data, you can join them in a csv file if you like e.g. by (1000000 is the number of notes):
+```
+paste test4.txt test5.txt  | sed 's/\s/, /g' | sed 's/^/1000000, /g'
+```
+You can change the number of nodes (`INPUT_SIZE_2` in tree.h) or the number of repetitions (`N` in test345.sh, however low `N`'s do not eliminate randomness so it is recommended to keep it above 30) and repeat:
+```
+make clean
+make build
+make time
+```
+Or you can run a single test (e.g. 3) by:
+```
+make test3
+./test3
+```
 
   <h6>Explanation</h6>   
   Comments on how the tree functions work are found in tree.c. Time complexity for Depth-First traversal is `O(n)`, for search/ access `O(log(n))` and for deletion `O(log(n))`. When inserting random data, the tree may be badly balanced, so the complexity for each function may converge to its worst time (linear - when all nodes are aligned like in a linked list).  
@@ -115,8 +138,13 @@ cache size: 6144 KB
 Distribution: Ubuntu 12.04.5 LTS
 compiler: gcc 4.6.3
 ```
+ <p align="center">
+  <img title="traversal time "src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/s_time.PNG" width=60%>  
+</p> 
  
- /* add graphs /*  
+ <p align="center">
+  <img title="traversal time" src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/t_time.PNG" width=60%>  
+</p> 
 
 The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test45.csv).
  
