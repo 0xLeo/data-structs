@@ -81,7 +81,7 @@ cache size: 6144 KB
 Distribution: Ubuntu 12.04.5 LTS
 compiler: gcc 4.6.3
 ```  
-Deletion, access, and insertion, and search are reduced to traversal (seek), therefore there is not really point measuring their time.
+Deletion, access, and insertion, and search are reduced to traversal (seek), therefore there is not really any point measuring their time.
   
 * Traversal time  
 <p align="center">
