@@ -111,7 +111,7 @@ test.c defines 6 tests (+):
 |
 +--+ Traverse without printing.
 |
-+--+ Read from file and print.
++ Read from file and print.
 ```  
 To create all executables and run all test for 1000000 nodes type:
 ```
