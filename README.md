@@ -99,7 +99,7 @@ Deletion, access, and insertion, and search are reduced to traversal (seek), the
 $ git clone https://github.com/0xLeo/data-structs.git
 $ cd data-structs/bin-tree/
 ```
-test.c defines 5 tests (+):
+test.c defines 6 tests (+):
 ```
 + Insert batches of data
 |
@@ -110,6 +110,8 @@ test.c defines 5 tests (+):
 +--+ Search last inserted element. Guaranteed to find it so that the search is deep.
 |
 +--+ Traverse without printing.
+|
++--+ Read from file and print.
 ```  
 To create all executables and run all test for 1000000 nodes type:
 ```
@@ -154,8 +156,9 @@ compiler: gcc 4.6.3
  
  <p align="center">
   <img title="traversal time" src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/t_time.PNG" width=60%>  
-</p> 
-
+</p>  
+\* TODO: add new graphs \*  
+  
 The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test45.csv).
  
 `[**]` <a id="anchor1"></a>To see why time was measured with shell, view  [issue 2](https://github.com/0xLeo/data-structs/issues/2).
