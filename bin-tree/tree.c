@@ -104,6 +104,16 @@ void tree_print(node* nP, node** newP, long int ctr, int* max, const int* printF
 
 }
 
+/*
+	input: a space-separated file f
+		caller function is responsible for 
+		where to start reading from and
+		to close the file
+	output: a tree nP that contains the integers
+		read from file
+	notes: file may contain up to 4 ints per line
+		if more, they are ignored
+*/		
 int tree_finsert (FILE* f, node** nP) { 
 
 	// 4 nums/ line =>
@@ -133,7 +143,4 @@ int tree_finsert (FILE* f, node** nP) {
 		}
 		
 	}
-	
-	//printf("numel = %d\n", *numel1 + *numel2);
-	
 }
