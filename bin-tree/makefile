@@ -88,4 +88,4 @@ time: $(EXE3) $(EXE4) $(EXE5)
 	./test345.sh $(EXE5)
 
 clean:
-	$(RM) *.o $(EXE1) $(EXE2) $(EXE3) $(EXE4) $(EXE5) $(EXE6) test?.txt temp a.out
+	$(RM) *.o $(EXE1) $(EXE2) $(EXE3) $(EXE4) $(EXE5) $(EXE6) test?.txt out?.txt temp a.out 
