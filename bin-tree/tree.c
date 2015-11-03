@@ -10,7 +10,6 @@ void tree_init(node** nP, int val){
 	(*nP)->parent = (*nP)->left = (*nP)->right = NULL;
 	(*nP)->data = val;
 }
-
 /* 
 	insertion algorithm is described on wikipedia:
 	https://en.wikipedia.org/wiki/Binary_heap
@@ -49,6 +48,15 @@ int tree_get_min(node** rootP){
 	return tempP->data;
 }
 
+/*	similar */
+int tree_get_max(node** rootP){
+	node* tempP = (node*) malloc(sizeof(node));
+	tempP = *rootP;
+	while ( tempP->right ) 
+		tempP = tempP->right;
+	return tempP->data;
+}
+
 /*
 	binary search on tree
 	return val if found, otherwise -1
@@ -67,6 +75,7 @@ int tree_search(node** nP, int val) {
 		return 0;
 	}
 }
+
 
 /*
 	spread to the left and right child
@@ -88,10 +97,43 @@ void tree_del_all(node** nP){
 	flag to !=0 to print data
 */
 void tree_print(node* nP, node** newP, long int ctr, int* max, const int* printFlag) {
-      if (( nP && *printFlag )){ printf("@depth %lu: %d\n" , ctr, nP->data);};
+      if ( nP && *printFlag ) printf("@depth %lu: %d\n" , ctr, nP->data);
           ctr++; 
-         if ( nP->right ) { tree_print(nP->right, newP, ctr, max, printFlag); }
-         if ( nP->left ) { tree_print(nP->left, newP, ctr, max, printFlag); }
+         if ( nP->right )  tree_print(nP->right, newP, ctr, max, printFlag);
+         if ( nP->left )  tree_print(nP->left, newP, ctr, max, printFlag);
 
 }
 
+int tree_finsert (FILE* f, node** nP) { 
+
+	// 4 nums/ line =>
+	// worst case length po 2 = (2^(ceil(log(12*4+4)/log(2))) = 64
+	char buf[64];
+	int buf2int[4], numel = 0;
+	short int how_many,  first_time = 0; // was last sscanf successful?, tree init flag
+	
+	while ( fgets( buf, 64, f) != NULL ) {
+
+		how_many = 0;
+		how_many += (sscanf(buf, "%d %d %d %d", 
+			&buf2int[0],  &buf2int[1],  &buf2int[2],  &buf2int[3]) == 4) * 4;
+		how_many += (sscanf(buf, "%d %d %d", 
+			&buf2int[0],  &buf2int[1],  &buf2int[2] ) == 3 && how_many == 0) * 3;
+		how_many += (sscanf(buf, "%d %d", 
+			&buf2int[0],  &buf2int[1]  ) == 2 && how_many == 0 ) * 2;
+		how_many += (sscanf(buf, "%d", 
+			&buf2int[0]) == 1  &&  how_many == 0);
+		
+		if ( (++first_time -1 ) == 0 )
+			tree_init(nP, buf2int[0]);
+		else
+		{
+			for (int i = 0 + (first_time == 1); i < how_many; i++)
+				tree_insert(nP, buf2int[i]);
+		}
+		
+	}
+	
+	//printf("numel = %d\n", *numel1 + *numel2);
+	
+}

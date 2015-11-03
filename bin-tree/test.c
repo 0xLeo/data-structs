@@ -5,7 +5,7 @@
 #include <unistd.h> // sleep() // replace with <Gwindows.h> for windows
 #include "tree.h"
 
-int main() {
+int main( char** argv, int argc) {
 	node* nTestP = (node*)malloc(sizeof(node));
 	tree_init(&nTestP,INPUT_PERIOD/2);
 
@@ -65,4 +65,23 @@ int main() {
 		tree_print(nTestP, &nTestP, 0, &max, &flag);
 		printf("--- traversing done\n");
 	#endif
+
+
+	#if defined TEST6
+		printf("-- reading from file and printing\n");
+		sleep(2);
+
+		node* nTestP2 = (node*)malloc(sizeof(node));
+		
+		FILE* f = fopen("./in/test6a.txt", "r");
+
+		tree_finsert(f, &nTestP2);
+		node* n1P = (node*)malloc(sizeof(node));
+		int max6 = LONG_MAX, flag6 = 1;
+		tree_print(nTestP2, &n1P, 0, &max6, &flag6);
+		free(n1P);
+		tree_del_all(&nTestP2);
+		fclose(f);
+	#endif
+	
 }
