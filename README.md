@@ -151,13 +151,12 @@ Distribution: Ubuntu 12.04.5 LTS
 compiler: gcc 4.6.3
 ```
  <p align="center">
-  <img title="traversal time "src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/s_time.PNG" width=60%>  
+  <img title="traversal time "src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/s_time.jpg" width=60%>  
 </p> 
  
  <p align="center">
-  <img title="traversal time" src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/t_time.PNG" width=60%>  
+  <img title="traversal time" src="https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/t_time.jpg" width=60%>  
 </p>  
-\* TODO: add new graphs \*  
   
 The respective comma-separated data are found [here](https://github.com/0xLeo/data-structs/blob/master/bin-tree/out/test45.csv).
  
