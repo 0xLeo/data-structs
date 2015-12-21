@@ -45,6 +45,9 @@ run:
 	./$(EXE2)
 	./$(EXE3)
 
+run1:
+	./$(EXE1)
+
 time:
 
 	./timewrapper.sh $(EXE2)
