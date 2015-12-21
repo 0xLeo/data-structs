@@ -30,6 +30,11 @@ int main() {
 		list_insert(&head, &tail, 20);
 		list_append(&head, &tail, 10);
 		list_print_head(&head);
+		printf("-- reversing head to tail list\n");	
+		list_rev(&head);
+		list_print_head(&head);
+		//list_print_head(&head);
+		//printf("%d\n", head->next->data);
 		printf("-- deleting list and attempting to print\n\n");
 		list_del(&head);
 		list_print_head(&head);

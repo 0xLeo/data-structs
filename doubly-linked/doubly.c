@@ -88,6 +88,38 @@ void list_print_head(nodeP* head){
 	printf("\n");
 }
 
+/*
+ 	list_rev
+	use: list_rev (&head)
+       	treats list as singly list,
+	reverses it by reversing the direction of links
+	and moving head to tail
+	
+	algorithm:	
+	find head
+	head -> next = NULL
+	while ( next node exists ) {
+		move to next node
+		new node's next = previous
+ 	}
+ 	the last new node we've reached is the new head
+ */
+void list_rev (nodeP* head) {
+	nodeP newHead = (nodeP) malloc (sizeof(node));
+	nodeP next = (nodeP) malloc (sizeof(node));
+
+	newHead = NULL;
+
+	while ( *head ) {
+		next = (*head)->next;
+		(*head)->next = newHead;
+		newHead = *head;
+		*head = next;
+	}
+	
+	*head = newHead;
+}
+
 void list_del(nodeP* head) {
 	nodeP where = (nodeP) malloc(sizeof(node));
 	nodeP temp = (nodeP) malloc(sizeof(node));
