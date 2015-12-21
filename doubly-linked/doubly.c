@@ -62,6 +62,7 @@ void list_insert_at (nodeP* head, const int n, const int val ){
 		
 }
 
+/* traverse from tail to head */
 void list_print_tail( nodeP* tail){
 	nodeP where = (nodeP) malloc(sizeof(node));
 
@@ -73,6 +74,8 @@ void list_print_tail( nodeP* tail){
 	}
 	printf("\n");
 }
+
+/* traverse from head to tail */
 void list_print_head(nodeP* head){
 	nodeP where = (nodeP) malloc(sizeof(node));
 
