@@ -91,7 +91,7 @@ void list_print_head(nodeP* head){
 /*
  	list_rev
 	use: list_rev (&head)
-       	treats list as singly list,
+       	treats list as singly linked,
 	reverses it by reversing the direction of links
 	and moving head to tail
 	
