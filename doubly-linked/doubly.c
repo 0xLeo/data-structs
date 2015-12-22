@@ -105,8 +105,8 @@ void list_print_head(nodeP* head){
  	the last new node we've reached is the new head
  */
 void list_rev (nodeP* head) {
-	nodeP newHead = (nodeP) malloc (sizeof(node));
-	nodeP next = (nodeP) malloc (sizeof(node));
+	nodeP newHead = NULL; 
+	nodeP next = NULL;
 
 	newHead = NULL;
 
@@ -117,6 +117,8 @@ void list_rev (nodeP* head) {
 		*head = next;
 	}
 	
+	free(next);
+	next = NULL;
 	*head = newHead;
 }
 
