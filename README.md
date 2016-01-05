@@ -63,7 +63,7 @@ Head in the linked list directory:
 </p>
  * list_rev
  <p align="center">
-  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_rev.png" width=65% title="list_rev">  
+  <img src="https://github.com/0xLeo/data-structs/blob/master/doubly-linked/img/list_rev.png" width=82% title="list_rev">  
 </p>  
 
  * list_delete_at
