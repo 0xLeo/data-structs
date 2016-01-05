@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> // clock
-#include "doubly.h" // nodeP
+#include "doubly.h" // NodeP
 
 
 int main() {
 
 	#ifdef TEST1
-		nodeP head, tail;
+		NodeP head, tail;
 		list_init(&head, &tail);
 
 		printf("--- test1\n-- creating the list:\n   20 19 .. 1 1 2 .. 10\n");
@@ -43,7 +43,7 @@ int main() {
 	
 	#ifdef TEST2
 		printf("--- test2\n");
-		nodeP head2, tail2;
+		NodeP head2, tail2;
 		list_init(&head2, &tail2);
 		for (int i = 0; i < SIZE_TEST2; i++)
 			list_insert(&head2, &tail2, i);

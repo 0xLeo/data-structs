@@ -5,15 +5,15 @@
 #define SIZE_INPUT 30 
 
 
-void list_init(nodeP* head, nodeP* tail) {
-	*head = (nodeP) malloc(sizeof(node));
-	*tail= (nodeP) malloc(sizeof(node));
+void list_init(NodeP* head, NodeP* tail) {
+	*head = (NodeP) malloc(sizeof(Node));
+	*tail= (NodeP) malloc(sizeof(Node));
 	*head = NULL;
 	*tail = NULL;
 }
 
-void list_insert(nodeP* head, nodeP* tail,  int val) {
-	nodeP new_node = (nodeP) malloc(sizeof(node));
+void list_insert(NodeP* head, NodeP* tail,  int val) {
+	NodeP new_node = (NodeP) malloc(sizeof(Node));
 	new_node->data = val;
 
 	new_node->next = *head;
@@ -26,8 +26,8 @@ void list_insert(nodeP* head, nodeP* tail,  int val) {
 	*head = new_node;
 }
 
-void list_append(nodeP* head, nodeP* tail, const int val) {
-	nodeP new_node = (nodeP) malloc(sizeof(node));
+void list_append(NodeP* head, NodeP* tail, const int val) {
+	NodeP new_node = (NodeP) malloc(sizeof(Node));
 	new_node->data = val;
 
 	new_node->prev = *tail;
@@ -40,11 +40,11 @@ void list_append(nodeP* head, nodeP* tail, const int val) {
 	*tail = new_node;
 }
 
-void list_insert_at (nodeP* head, const int n, const int val ){
-	nodeP new_node = (nodeP) malloc(sizeof(node));
+void list_insert_at (NodeP* head, const int n, const int val ){
+	NodeP new_node = (NodeP) malloc(sizeof(Node));
 	new_node->data = val;
 
-	nodeP where = (nodeP) malloc(sizeof(node));
+	NodeP where = (NodeP) malloc(sizeof(Node));
 
 	where = *head;
 	int i =0;
@@ -63,8 +63,8 @@ void list_insert_at (nodeP* head, const int n, const int val ){
 }
 
 /* traverse from tail to head */
-void list_print_tail( nodeP* tail){
-	nodeP where = (nodeP) malloc(sizeof(node));
+void list_print_tail( NodeP* tail){
+	NodeP where = (NodeP) malloc(sizeof(Node));
 
 	where = *tail;
 
@@ -76,8 +76,8 @@ void list_print_tail( nodeP* tail){
 }
 
 /* traverse from head to tail */
-void list_print_head(nodeP* head){
-	nodeP where = (nodeP) malloc(sizeof(node));
+void list_print_head(NodeP* head){
+	NodeP where = (NodeP) malloc(sizeof(Node));
 
 	where = *head;
 
@@ -104,9 +104,9 @@ void list_print_head(nodeP* head){
  	}
  	the last new node we've reached is the new head
  */
-void list_rev (nodeP* head) {
-	nodeP newHead = NULL; 
-	nodeP next = NULL;
+void list_rev (NodeP* head) {
+	NodeP newHead = NULL; 
+	NodeP next = NULL;
 
 	newHead = NULL;
 
@@ -122,9 +122,9 @@ void list_rev (nodeP* head) {
 	*head = newHead;
 }
 
-void list_del(nodeP* head) {
-	nodeP where = (nodeP) malloc(sizeof(node));
-	nodeP temp = (nodeP) malloc(sizeof(node));
+void list_del(NodeP* head) {
+	NodeP where = (NodeP) malloc(sizeof(Node));
+	NodeP temp = (NodeP) malloc(sizeof(Node));
 
 	where = *head;
 
@@ -132,20 +132,20 @@ void list_del(nodeP* head) {
 		temp = where;
 		where = where->next;
 		free(temp);
-		memset(temp, 0, sizeof(node)); 
+		memset(temp, 0, sizeof(Node)); 
 	}
 	*head = NULL;
 	
 }
 
-void list_del_at (nodeP* head, nodeP* tail, const int n) {
+void list_del_at (NodeP* head, NodeP* tail, const int n) {
 
-	nodeP where = (nodeP) malloc(sizeof(node));
+	NodeP where = (NodeP) malloc(sizeof(Node));
 
 	where = *head;
 	if (n > 1 ) {
 		if (  where->next  ) {
-			nodeP temp  = (nodeP) malloc(sizeof(node));
+			NodeP temp  = (NodeP) malloc(sizeof(Node));
 
 			int i =0;
 			while (i < n-1 && where != NULL){
@@ -158,35 +158,35 @@ void list_del_at (nodeP* head, nodeP* tail, const int n) {
 			
 			where->next->next->prev = where;
 			free(where->next);
-			memset(where->next,0,sizeof(node));	
+			memset(where->next,0,sizeof(Node));	
 			temp=where->next->next;
 			where->next = temp;
 			
 			//temp=NULL;
 			free(temp);
-			memset(temp,0,sizeof(node));
+			memset(temp,0,sizeof(Node));
 		}
 	} else if ( n == 1) {
 		//update head
 		if (head ) {
-			nodeP temp  = (nodeP) malloc(sizeof(node));
+			NodeP temp  = (NodeP) malloc(sizeof(Node));
 			temp = *head;
 			*head = (*head)->next;
 			(*head)->prev = NULL;
 			free(temp);
 			//
-			memset(temp,0,sizeof(node));
+			memset(temp,0,sizeof(Node));
 		}
 	} else  {
 		//update tail
 		if (tail ) {
-			nodeP temp  = (nodeP) malloc(sizeof(node));
+			NodeP temp  = (NodeP) malloc(sizeof(Node));
 			temp = *tail;
 			//printf("--tail->prev=%d\n",((*tail)->prev)->data);
 			*tail = (*tail)->prev;
 			(*tail)->next = NULL;
 			free(temp);
-			memset(temp,0,sizeof(node));
+			memset(temp,0,sizeof(Node));
 		}
 	}
 }

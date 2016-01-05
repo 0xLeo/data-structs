@@ -2,24 +2,24 @@
 #define DOUBLY_H
 
 #define SIZE_TEST1 30
-#define SIZE_TEST2 6000000 
+#define SIZE_TEST2 1000000 
 
 typedef struct _node {
 	int data;
 	struct _node* next;	
 	struct _node* prev;	
-} node;
+} Node;
 
-typedef node* nodeP;
+typedef Node* NodeP;
 
-void list_init(nodeP* head, nodeP* tail);
-void list_insert(nodeP* head, nodeP* tail, const int val);
-void list_append(nodeP* head, nodeP* tail, const int val);
-void list_insert_at(nodeP* head, const int n, const int val);
-void list_print_tail(nodeP* tail);
-void list_print_head(nodeP* head);
-void list_rev (nodeP* head);
-void list_del(nodeP* head);
-void list_del_at(nodeP* head, nodeP* tail,const int val);
+void list_init(NodeP* head, NodeP* tail);
+void list_insert(NodeP* head, NodeP* tail, const int val);
+void list_append(NodeP* head, NodeP* tail, const int val);
+void list_insert_at(NodeP* head, const int n, const int val);
+void list_print_tail(NodeP* tail);
+void list_print_head(NodeP* head);
+void list_rev (NodeP* head);
+void list_del(NodeP* head);
+void list_del_at(NodeP* head, NodeP* tail,const int val);
 
 #endif
