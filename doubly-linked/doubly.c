@@ -109,12 +109,13 @@ void list_rev (NodeP* head) {
 	NodeP next = NULL;
 
 	newHead = NULL;
+	NodeP oldHead = *head;
 
-	while ( *head ) {
-		next = (*head)->next;
-		(*head)->next = newHead;
-		newHead = *head;
-		*head = next;
+	while ( oldHead ) {
+		next = oldHead->next;
+		oldHead->next = newHead;
+		newHead = oldHead;
+		oldHead = next;
 	}
 	
 	free(next);
