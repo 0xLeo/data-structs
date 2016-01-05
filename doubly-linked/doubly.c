@@ -119,6 +119,7 @@ void list_rev (NodeP* head) {
 	}
 	
 	free(next);
+	free(oldHead);
 	next = NULL;
 	*head = newHead;
 }
