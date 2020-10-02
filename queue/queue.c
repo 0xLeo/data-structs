@@ -87,15 +87,25 @@ unsigned int printQueue(Queue* queue) {
  *
  * @param queue A Queue
  *
- * @return A positive integer if error, else 0
+ * @return A valid point (x, y, 1) if queue non empty, else invalid point, i.e. (x, y, 0)
  */
-unsigned int pop(Queue* queue) {
+Point pop(Queue* queue) {
 	// if head next not null
 	PointNode* tmp = queue->head;
-	if (tmp == NULL)
-		return ERROR_CANNOT_ALLOC;
-	queue->head = queue->head->next;
-	free(tmp);
+	Point ret;
+	if (tmp != NULL) {
+		// get current point
+		ret = queue->head->pt;
+		// move to next and delete current
+		queue->head = queue->head->next;
+		free(tmp);
+	} else {
+		// empty list - then return invalid point
+		ret.x = 0;
+		ret.y = 0;
+		ret.valid = 0;
+	}
+	return ret;
 }
 
 
