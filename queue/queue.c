@@ -38,16 +38,20 @@ unsigned int isEmpty(Queue* queue){
  *
  * @return A positive integer if error, else 0
  */
-unsigned int append(Queue* queue, Point pt){
+unsigned int append(Queue* queue, Point pt) {
+	// check for errors
 	PointNode* next = malloc(sizeof(PointNode));
 	if (next == NULL)
 		return ERROR_CANNOT_ALLOC;
+	// create next node
 	next->pt = pt;
 	next->next = NULL;
-
-	if (queue->head == NULL)
+	// add node to list
+	if (queue->head == NULL) {
+		// initialise list with 1 node
 		queue->head = queue->tail = next; 
-	else{
+	} else {
+		// add to tail
 		queue->tail->next = next;
 		queue->tail = next;
 	}
